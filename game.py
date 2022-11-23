@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/bin/Python3
 
 #MY FIRST PYTHON GAME SOFTWARE
 #it's just a Simple Game about geussing, that's all.. hahah
@@ -33,7 +33,10 @@ if __name__ == '__main__':
         inputNumber = promptUser()
         generatedNum = generator(inputNumber)
         generatedNum = int(generatedNum)
-        guessdNum = int(input("Guess The Random Number Generated Between between 1 and the Level you enterd : "))
+        try:
+            guessdNum = int(input("Guess The Random Number Generated Between between 1 and the Level you enterd : "))
+        except:
+            print("Please, Enter a Numerical Number: "
         if guessdNum == generatedNum:
             print("Congratulations ! Congratulations !! Congratulations!!! "
                   "\nThe Number Generated is {} \n YOU WON!!!".format(generatedNum))
