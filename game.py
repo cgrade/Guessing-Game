@@ -22,7 +22,10 @@ def promptUser():
 def generator(n):
     """This Function takes an integer and randomly generate a number between 1 and n.
     Returns the generated number"""
-    genrtdNumber = random.randrange(1, int(n) + 1)
+    try:
+        genrtdNumber = random.randrange(1, int(n) + 1)
+    except:
+        print("Please, enter a numeric value: ")
     return (genrtdNumber)
 
 
@@ -36,7 +39,7 @@ if __name__ == '__main__':
         try:
             guessdNum = int(input("Guess The Random Number Generated Between between 1 and the Level you enterd : "))
         except:
-            print("Please, Enter a Numerical Number: "
+            print("Please, Enter a Numerical Number: ")
         if guessdNum == generatedNum:
             print("Congratulations ! Congratulations !! Congratulations!!! "
                   "\nThe Number Generated is {} \n YOU WON!!!".format(generatedNum))
